@@ -5,20 +5,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace bytebank_ADM.Utilitarios
+namespace bytebank_ADM.Utilitario
 {
     public class GerenciadorDeBonificacao
     {
-        public double TotalDeBonificacao { get; private set; }
+        public double TotalDeBonficacao { get; private set; }
 
-        public void Registar(Funcionario funcionario)
+        public void Registrar(Funcionario funcionario)
         {
-            this.TotalDeBonificacao += funcionario.GetBonificacao();
+            this.TotalDeBonficacao += funcionario.GetBonificacao();
         }
 
-        public void MostrarTotal()
+        public void Registrar(Diretor diretor)
         {
-            Console.WriteLine("Total: " + this.TotalDeBonificacao);
+            this.TotalDeBonficacao += diretor.GetBonificacao();
         }
     }
 }
