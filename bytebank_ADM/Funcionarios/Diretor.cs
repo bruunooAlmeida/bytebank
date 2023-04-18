@@ -6,14 +6,32 @@ using System.Threading.Tasks;
 
 namespace bytebank_ADM.Funcionarios
 {
-    public class Diretor 
+    public class Diretor : Funcionario
     {
-        public string Nome { get; set; }
-        public string Cpf { get; set; }
-        public double Salario { get; set; }
-        public double GetBonificacao()
+
+
+        public int nivel { get; set; }
+
+        public Diretor(int nivel, String nome, string cpf, double salario) : base(nome, cpf, salario)
         {
-            return this.Salario;
+            this.nivel = nivel;
         }
-    }    
+        /// <summary>
+        /// Este método retorna 10% do salario do Funcionario
+
+        /// </summary>
+        /// <returns>this.salario.</returns>
+        public override double GetBonificacao()
+        {
+            return this.Salario + base.GetBonificacao();
+        }
+
+        public override void MostrarInformacao()
+        {
+            Console.WriteLine(".........Diretor........\n" +
+                              "Nome...:" + this.Nome + '\n' +
+                              "CPF....:" + this.Cpf + '\n' +
+                              "Salario:" + this.Salario);
+        }
+    }
 }

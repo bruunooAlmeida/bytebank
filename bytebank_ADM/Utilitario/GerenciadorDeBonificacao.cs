@@ -20,5 +20,10 @@ namespace bytebank_ADM.Utilitario
         {
             this.TotalDeBonficacao += diretor.GetBonificacao();
         }
+
+        public void MostrarTotal()
+        {
+            Console.WriteLine("Total: " + this.TotalDeBonficacao);
+        }
     }
 }

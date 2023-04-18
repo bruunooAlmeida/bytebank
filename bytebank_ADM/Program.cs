@@ -1,27 +1,22 @@
 ﻿using bytebank_ADM.Funcionarios;
 using bytebank_ADM.Utilitario;
 
-Funcionario pedro = new Funcionario();
-pedro.Nome = "Pedro malazartes";
-pedro.Cpf = "123456789";
-pedro.Salario = 2000;
 
-Console.WriteLine(pedro.Nome);
-Console.WriteLine(pedro.GetBonificacao());
-
-Diretor roberta = new Diretor();
-roberta.Nome = "Roberta Silva";
-roberta.Cpf = "987654321";
-roberta.Salario = 5000;
-
-Console.WriteLine(roberta.Nome);
-Console.WriteLine(roberta.GetBonificacao());
-
-GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();
-gerenciador.Registrar(pedro);
-gerenciador.Registrar(roberta);
-
-Console.WriteLine("Total de bonificações: " + gerenciador.TotalDeBonficacao);
+Funcionario funcionario = new Funcionario("Buno Henrique", "06518795905", 4500);
+Console.WriteLine("Total_Funcionarios" + Funcionario.TotalFuncionarios);
+Diretor diretor = new Diretor(1, "bruno Silva", "06518795905", 6500);
+Console.WriteLine("Total_Funcionarios:" + Funcionario.TotalFuncionarios);
+GerenciadorDeBonificacao ger = new GerenciadorDeBonificacao();
 
 
+
+Console.WriteLine(funcionario.GetBonificacao());
+funcionario.MostrarInformacao();
+diretor.MostrarInformacao();
+
+ger.Registrar(funcionario);
+
+ger.Registrar(diretor);
+
+ger.MostrarTotal();
 
