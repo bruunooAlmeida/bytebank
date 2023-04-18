@@ -9,11 +9,13 @@ namespace bytebank_ADM.Funcionarios
     public abstract class Funcionario 
     {
         public static int TotalFuncionarios { get; set; }
-        public string Nome { get; private set; }
+        public string Nome    { get; set; }
 
-        public string Cpf { get; private set; }
+        public string Cpf     { get; private set; }
 
         public double Salario { get;  set; }
+
+        public string Senha   { get; set; }
 
         public Funcionario(String nome, string cpf, double salario)
         {
@@ -38,10 +40,15 @@ namespace bytebank_ADM.Funcionarios
 
         public abstract void AumentarSalario();        
 
+        public bool Autenicar(string senha)
+        {
+            return senha == this.Senha;
+        }
+
         public virtual void MostrarInformacao()
         {
             Console.WriteLine("Nome...:" + this.Nome + '\n' +
-                              "CPF....:" + this.Cpf + '\n' +
+                              "CPF....:" + this.Cpf  + '\n' +
                               "Salario:" + this.Salario);
         }
     }

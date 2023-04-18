@@ -1,4 +1,5 @@
 ﻿using bytebank_ADM.Funcionarios;
+using bytebank_ADM.Sistema_Interno;
 using bytebank_ADM.Utilitario;
 
 
@@ -15,6 +16,25 @@ GerenciadorDeBonificacao ger = new GerenciadorDeBonificacao();
 //ger.Registrar(funcionario);
 
 ger.Registrar(diretor);
+
+UsarSistema();
+
+void UsarSistema()
+{
+    SistemaInterno sistema = new SistemaInterno();
+    Diretor ingrid = new Diretor("8445455");    
+    ingrid.Nome    = "Ingrid Novaes";
+    ingrid.Senha   = "123456";
+
+
+    GerenteDeConta ursula = new GerenteDeConta("946555");
+    ursula.Senha = "12345";
+    ursula.Nome = "Joaquina Silva";
+
+    sistema.Logar(ursula, "12345");
+    sistema.Logar(ingrid, "12345");
+
+}
 
 //ger.MostrarTotal();
 
