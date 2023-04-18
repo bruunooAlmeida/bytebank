@@ -40,11 +40,6 @@ namespace bytebank_ADM.Funcionarios
 
         public abstract void AumentarSalario();        
 
-        public bool Autenicar(string senha)
-        {
-            return senha == this.Senha;
-        }
-
         public virtual void MostrarInformacao()
         {
             Console.WriteLine("Nome...:" + this.Nome + '\n' +
