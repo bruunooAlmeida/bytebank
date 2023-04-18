@@ -27,7 +27,7 @@ namespace bytebank_ADM.Funcionarios
         /// <returns>this.salario.</returns>
         public override double GetBonificacao()
         {
-            return this.Salario + base.GetBonificacao();
+            return Salario * 0.15;
         }
 
         public override void AumentarSalario()

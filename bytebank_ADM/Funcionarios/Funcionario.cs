@@ -34,15 +34,9 @@ namespace bytebank_ADM.Funcionarios
 
         /// </summary>
         /// <returns>this.salario.</returns>
-        public abstract double GetBonificacao()
-        {
-          
-        }
+        public abstract double GetBonificacao();
 
-        public abstract void AumentarSalario()
-        {
-            
-        }
+        public abstract void AumentarSalario();        
 
         public virtual void MostrarInformacao()
         {
