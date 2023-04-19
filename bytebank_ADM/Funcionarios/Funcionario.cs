@@ -17,7 +17,7 @@ namespace bytebank_ADM.Funcionarios
 
         public string Senha   { get; set; }
 
-        public Funcionario(String nome, string cpf, double salario)
+        public Funcionario(string nome, string cpf, double salario)
         {
             this.Nome = nome;
             this.Cpf = cpf;
@@ -29,6 +29,12 @@ namespace bytebank_ADM.Funcionarios
         public Funcionario(string cpf) 
         { 
             this.Cpf += cpf;
+        }
+
+        public Funcionario(string cpf , double salario)
+        {
+            this.Cpf += cpf;
+            this.Salario = salario;
         }
 
         /// <summary>

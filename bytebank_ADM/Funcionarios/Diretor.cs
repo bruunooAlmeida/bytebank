@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using bytebank_ADM.Sistema_Interno;
+using static bytebank_ADM.SistemaInterno.SistemaInterno;
 
 namespace bytebank_ADM.Funcionarios
 {
-    public class Diretor : Auntenticavel
+    public class Diretor : FuncionarioAutenticavel
     {
 
         public int nivel { get; set; }
@@ -43,5 +44,7 @@ namespace bytebank_ADM.Funcionarios
                               "CPF....:" + this.Cpf + '\n' +
                               "Salario:" + this.Salario);
         }
+
+       
     }
 }

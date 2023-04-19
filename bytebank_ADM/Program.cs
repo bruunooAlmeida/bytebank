@@ -1,4 +1,5 @@
 ﻿using bytebank_ADM.Funcionarios;
+using bytebank_ADM.Parceria;
 using bytebank_ADM.Sistema_Interno;
 using bytebank_ADM.Utilitario;
 
@@ -30,6 +31,10 @@ void UsarSistema()
     GerenteDeConta ursula = new GerenteDeConta("946555");
     ursula.Senha = "12345";
     ursula.Nome = "Joaquina Silva";
+
+    ParceiroComercial caio = new ParceiroComercial("999");
+
+    sistema.Logar(caio, "999");
 
     sistema.Logar(ursula, "12345");
     sistema.Logar(ingrid, "12345");
